@@ -1,13 +1,11 @@
-
 import pyautogui
 import time
 
 while True:
     try:
-        button_location = pyautogui.locateOnScreen('calling.png')
-        continue
+        button_location = pyautogui.locateOnScreen('ringing.png')
+        button_center = pyautogui.press("f12")
+        break
     except:
-        if pyautogui.locateOnScreen('ringing.png')!=None:
-            time.sleep(5)
-            pyautogui.press('f12')
-            break
+        time.sleep(1)
+        continue
